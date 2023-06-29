@@ -14,7 +14,6 @@ n = int(input('Введите кол-во арбузов: '))
 massive = [0] * (n)
 for i in range(n):
     massive[i] += int(input(f'Введите вес {i+1} арбуза: '))
-    i += 1
 
 max = min = massive[0]
 
@@ -23,6 +22,5 @@ for i in range(n):
         max = massive[i]
     elif massive[i] < min:
         min = massive[i]
-    i += 1
 
 print(min, max)
