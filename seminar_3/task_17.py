@@ -8,3 +8,14 @@ Output: 6
 списка или список задан изначально.
 """
 
+n = int(input('Введите кол-во элементов в списке: '))
+array = [0] * n
+
+for i in range(n):
+    array[i] = int(input('Введите число: '))
+print(array)
+
+array = set(array)
+print(array)
+
+print(len(array))

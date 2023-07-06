@@ -11,3 +11,21 @@ Output: [4, 5, 1, 2, 3]
 списка или список задан изначально.
 """
 
+n = int(input('Введите кол-во чисел в последовательности: '))
+array = [0] * n
+
+for i in range(n):
+    array[i] = int(input('Введите число: '))
+
+print(array)
+
+k = int(input('Введите число, на которое нужно сдвинуть последовательность: '))
+result = [0] * n
+
+for i in range(n):
+    if i+k > n-1:
+       result[i] = array[i+k-n] 
+    else:
+        result[i] = array[i+k]
+
+print(result)
