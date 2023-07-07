@@ -8,3 +8,12 @@
 4
 '''
 
+a = int(input('Введите число: '))
+b = int(input('Введите число: '))
+
+def sum(num_1, num_2):
+    if num_2 == 0:
+        return num_1
+    return sum(num_1 + 1, num_2 - 1)
+
+print(sum(a, b))

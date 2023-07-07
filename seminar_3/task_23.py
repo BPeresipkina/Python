@@ -10,3 +10,14 @@ Output: 2 (-1 < 5, 2 < 3)
 списка или список задан изначально.
 """
 
+n = int(input('Введите кол-во элементов массива: '))
+array = [0] *n
+count = 0
+
+for i in range(n):
+    array[i] += int(input('Введите число: '))
+    if i > 0:
+        if array[i] > array [i-1]:
+            count += 1
+
+print(count)
