@@ -8,16 +8,24 @@ Output: 120
 """
 
 n = int(input('Введите число: '))
-result = 1
+# result = 1
 
-if n == 0:
-    print(result)
+# if n == 0:
+#     print(result)
 
-elif n < 0:
-    print('Введено неверное значение')
+# elif n < 0:
+#     print('Введено неверное значение')
 
-else:
-    while n>0:
-        result *= n
-        n -= 1
-    print(result)
+# else:
+#     while n>0:
+#         result *= n
+#         n -= 1
+#     print(result)
+
+count = 1
+fact = 1
+while count <= n:
+    fact *= count
+    count += 1
+
+print(fact)

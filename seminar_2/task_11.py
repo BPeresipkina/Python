@@ -18,7 +18,7 @@ result = 0
 if a == f1:
     print(1)
 elif a == f2:
-    print(2)
+    print(f'2 или 3')
 else:
     while result<a:
         result = f2 + f3

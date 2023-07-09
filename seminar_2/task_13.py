@@ -14,24 +14,40 @@
 Input: 6 -> -20 30 -40 50 10 -10
 Output: 2
 """
-
+from random import randint
 n = int(input('Введите кол-во дней: '))
-massive = [0] * (n)
-for i in range(n):
-    massive[i] += int(input(f'Введите температуру {i+1} дня: '))
-    i += 1
+# massive = [0] * (n)
+# for i in range(n):
+#     massive[i] += int(input(f'Введите температуру {i+1} дня: '))
 
-# print(massive)
+# # print(massive)
 
-count = 0
-result = 0
+# count = 0
+# result = 0
+# for i in range(n):
+#     if massive[i] > 0:
+#         count += 1
+#         if count>result:
+#             result = count
+#     else:
+#         count = 0
+
+# print(result)
+
+cur_plus = 0
+max_plus = 0
 for i in range(n):
-    if massive[i] > 0:
-        count += 1
-        if count>result:
-            result = count
+    temp = randint(-40, 40)
+    print(temp, end=' ')
+    if temp > 0:
+        cur_plus += 1
     else:
-        count = 0
-    i += 1
+        if cur_plus > max_plus:
+            max_plus = cur_plus
+        cur_plus = 0
 
-print(result)
+if cur_plus > max_plus:
+    max_plus = cur_plus
+cur_plus = 0
+
+print(f'\n{max_plus}')
