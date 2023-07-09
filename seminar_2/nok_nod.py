@@ -5,15 +5,14 @@
 a = int(input('Введите число: '))
 b = int(input('Введите число: '))
 
-flag = False
-for i in range(2, min(a,b)):
+for i in range(min(a,b), 1, -1):
     if a % i == 0 and b % i == 0:
         nod = i
-        if flag:
-            continue
-        else:
-            nok = i
-            flag = True
+        break
+for i in range(max(a,b), a*b):
+    if i % a == 0 and i % b == 0:
+        nok = i
+        break
 
 print(f'НОК = {nok}')
 print(f'НОД = {nod}')
