@@ -14,3 +14,10 @@ while n>0:
 
 
 print(result)
+
+# a = input('Введите число: ')
+# result = 0
+# for i in a:
+#     result += int(i)
+
+# print(result)

@@ -29,3 +29,13 @@ for i in range(n):
         result[i] = array[i+k]
 
 print(result)
+
+# # Доп. решение 1
+# for i in range(k):
+#     array.insert(0, array.pop())
+# print(array)
+
+# # Доп. решение 2
+# a1 = array[-k:]
+# a2 = array[:-k]
+# print(a1 + a2)

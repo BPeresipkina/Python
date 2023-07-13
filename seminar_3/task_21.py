@@ -17,8 +17,7 @@ dict = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"},
 value = set()
 
 for i in dict:
-    dict_dict = i
-    for j in dict_dict:
-        value.add(dict_dict[j])
+    for j in i.values():
+        value.add(j.strip())
 
 print(value)

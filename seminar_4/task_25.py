@@ -22,6 +22,17 @@ for i in range(len(array)-1):
         if array[i] == array[j]:
             array[j] += f'_{n}'
             n += 1
-            print(i, j, array[i], array[j])
+            # print(i, j, array[i], array[j])
 
 print(array)
+
+# # Вариант решения на семинаре:
+# line = line.split()
+# result = {}
+# for i in line:
+#     if i in result:
+#         result[i] += 1
+#         print(f'{i}_{result[i]}', end = ' ')
+#     else:
+#         result[i] = 0
+#         print(i, end = ' ')
