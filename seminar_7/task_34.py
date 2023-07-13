@@ -15,3 +15,23 @@
 Парам пам-пам
 '''
 
+text = 'пара-ра-рам рам-пам-папам па-ра-па-дам'.lower().split() # (input('Введите текст: '))
+# print(text)
+list_1 = list()
+
+for i in text:
+    count = 0
+    for j in i:
+        if j == 'а':
+            count += 1
+    list_1.append(count)
+
+flag = False
+for i in range(len(list_1)-1):
+    if list_1[i+1] != list_1[i]:
+        flag = True
+
+if flag == True:
+    print('Пам парам')
+else:
+    print('Парам пам-пам')
