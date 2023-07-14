@@ -20,3 +20,10 @@ for i in range(n):
         count =+ 1
 
 print(count)
+
+# # решение преподавателя
+
+# n = int(input())
+# lst = [int(input()) for i in range(n)]
+# x = int(input())
+# print(lst.count(x))

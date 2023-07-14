@@ -29,3 +29,16 @@ for i in range(n):
     
 
 print(result)
+
+# # решение преподавателя
+
+# n = int(input())
+# lst = [int(input()) for i in range(n)]
+# x = int(input())
+# min_range = abs(x-lst[0])
+# el = lst[0]
+# for i in lst:
+#     if abs(x-i)< min_range:
+#         min_range = abs(x-i)
+#         el = i
+# print(el)

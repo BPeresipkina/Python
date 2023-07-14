@@ -9,23 +9,32 @@
 Они решили так: у кого будет меньше ошибок в коде, тот и выиграл спор. 
 За помощью товарищи обратились к Вам, студентам.
 
-Ваня:
-n = int(input())
-max_number = 1000
+Ваня: 2е ошибки
+n = int(input()) 
+max_number = 1000 # n
 while n != 0:
  n = int(input())
- if max_number > n:
+ if max_number > n: # <
  max_number = n
 print(max_number)
 
-Петя:
+Петя: 3 ошибки
 n = int(input())
-max_number = -1
-while n < 0:
+max_number = -1 # n
+while n < 0: # !=
  n = int(input())
  if max_number < n:
- n = max_number
+ n = max_number # max_number = n
 print(n)
 
 '''
 
+n = int(input)
+max_n = n
+
+while n!= 0:
+    n = int(input())
+    if n>max_n:
+        max_n = n
+
+print(max_n)
