@@ -19,25 +19,25 @@ import random
 n = int(input('Введите кол-во элементов первого набора чисел: '))
 m = int(input('Введите кол-во элементов второго набора чисел: '))
 
-array_n = [0] * n
-array_m = [0] * m
+array_n = []
+array_m = []
 array_r = set()
 
 for i in range(n):
-    array_n[i] = int(input('Введите число 1-го набора: '))
+    array_n.append(int(input('Введите число 1-го набора: ')))
 # print(array_n)
 
 for i in range(m):
-    array_m[i] = int(input('Введите число 2-го набора: '))
+    array_m.append(int(input('Введите число 2-го набора: ')))
 # print(array_m)
 
-for i in range(n):
-    for j in range(m):
-        if array_n[i] == array_m[j]:
-            array_r.add(array_n[i])
-# print(array_r)
+# for i in array_m:
+#     if i in array_n:
+#         array_r.add(i)
+# # print(array_r)
 
-array_r = list(array_r)
+array_r = set(array_n).intersection(set(array_m))
+# print(array_r)
 
 def quicksort(nums):
    
@@ -57,4 +57,4 @@ def quicksort(nums):
                e_nums.append(n)
        return quicksort(s_nums) + e_nums + quicksort(m_nums)
    
-print(quicksort(array_r))
+print(quicksort(list(array_r)))

@@ -21,9 +21,9 @@
 
 n = int(input('Введите кол-во кустов: '))
 
-array = [0] * n
+array = []
 for i in range(n):
-    array[i] = i + 1
+    array.append(i + 1)
 
 print(array)
 
