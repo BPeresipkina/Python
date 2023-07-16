@@ -20,3 +20,11 @@
 (каждое число вводится с новой строки)
 '''
 
+n = int(input('Введите кол-во элементов массива: '))
+array = [int(input('Введите число: ')) for i in range(n)]
+count = 0
+
+for i in range(1, n-1):
+    if array[i] > array[i-1] and array[i] > array[i+1]:
+        count += 1
+print(count)

@@ -14,3 +14,18 @@
 220 284
 '''
 
+# Решение преподавателя:
+
+k = int(input())
+lst = []
+
+for i in range(k):
+    summa = 0
+    for j in range(1, i//2+1):
+        if i%j == 0:
+            summa += j
+    lst.append([i, summa])
+for i in range(len(lst)):
+    for j in range(i+1, len(lst)):
+        if lst[i][0] == lst[j][1] and lst[i][1] == lst[j][0]:
+            print(lst[i][0], lst[j][0])

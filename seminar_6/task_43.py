@@ -10,3 +10,22 @@
 2
 '''
 
+array = [1, 2, 3, 2, 3]
+count = 0
+
+for i in range(len(array)-1):
+    for j in range(i+1,len(array)):
+        if array[i] == array[j]:
+            count += 1
+print(count)
+
+# # Решение преподавателя:
+# array = [1, 2, 3, 2, 3, 2, 1, 1]
+# dct = {}
+# summ = 0
+# for i in range(len(array)):
+#     if i in dct:
+#         summ += dct[i]
+#     dct[i] = dct.get(i, 0) + 1
+
+# print(summ)
