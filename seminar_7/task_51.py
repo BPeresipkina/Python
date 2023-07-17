@@ -17,3 +17,16 @@ else:
 same
 '''
 
+def same_by(characteristic, objects):
+    flag = True
+    for i in objects:
+        if not characteristic(i):
+            flag = False
+    return flag
+    
+
+values = [0, 2, 10, 6]
+if same_by(lambda x: x % 2==0, values):
+    print('same')
+else:
+    print('different')

@@ -7,7 +7,7 @@
 по которой вращается самая далекая планета. 
 Круговые орбиты не учитывайте: вы знаете, 
 что у вашей звезды таких планет нет, 
-зато искусственные спутники были были запущены на круговые орбиты. 
+зато искусственные спутники были запущены на круговые орбиты. 
 Результатом функции должен быть кортеж, 
 содержащий длины полуосей эллипса орбиты самой далекой планеты. 
 Каждая орбита представляет из себя кортеж из пары чисел - полуосей ее эллипса. 
@@ -26,3 +26,16 @@ print(*find_farthest_orbit(orbits))
 2.5 10
 '''
 
+def find_farthest_orbit(list_of_orbits):
+    from math import pi
+    max_s = 0
+    for i in range(len(list_of_orbits)):
+        if list_of_orbits[i][0] != list_of_orbits[i][1]:
+            s = pi * list_of_orbits[i][0] * list_of_orbits[i][1]
+            if s > max_s:
+                max_s = s
+                result = (list_of_orbits[i][0], list_of_orbits[i][1])
+    return result
+            
+orbits = [(1, 3), (2.5, 10), (7, 2), (6, 6), (4, 3)]
+print(*find_farthest_orbit(orbits))
