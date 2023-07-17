@@ -1,5 +1,5 @@
 def input_num():
-    ask = int(input('Выберите действие:\n1 - Записать новый контакт\n2 - Найти контакт\n3 - Сортировка\n4 - Вывести весь справочник\n'))
+    ask = int(input('Выберите действие:\n1 - Записать новый контакт\n2 - Найти контакт\n3 - Изменить контакт\n4 - Удалить контакт\n5 - Вывести весь справочник\n6 - Сортировка\n'))
     return ask
 
 def input_name():
@@ -18,3 +18,8 @@ def input_chara():
 def sort_id(a):
     a.sort(key = lambda x : int(x.split(',')[0]))
     return a
+
+def cont_id():
+    print()
+    id = input('Введите id контакта: ')
+    return id
